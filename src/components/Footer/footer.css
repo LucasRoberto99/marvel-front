@@ -1,0 +1,19 @@
+.footer {
+  height: 150px;
+  width: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.signature {
+  color: white;
+  display: flex;
+  gap: 5px;
+}
+
+.signature a {
+  color: white;
+}

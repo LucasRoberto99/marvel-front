@@ -1,0 +1,33 @@
+.hero {
+  /* border: red 1px solid; */
+  width: 210px;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero-pic {
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+.hero-name {
+  font-size: 22px;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.hero-desc {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 14px;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.hero:hover {
+  box-shadow: 0px 0px 5px white;
+}

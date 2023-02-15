@@ -1,0 +1,83 @@
+.bgc-galaxy {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.marvel-hero-pic {
+  width: 1024px;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  box-shadow: 0px 0px 5px white;
+}
+
+.marvel-banner {
+  position: relative;
+}
+
+.marvel-logo {
+  height: 250px;
+  position: absolute;
+  top: 75px;
+  left: 202px;
+}
+
+.header-button {
+  height: 200px;
+  /* border: white 2px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-style1 {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: white 3px solid;
+  border-radius: 5px;
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.3s;
+}
+
+.button-style1:hover {
+  box-shadow: inset 200px 0 0 0 white;
+  cursor: pointer;
+  color: black;
+}
+
+.div-searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar {
+  width: 280px;
+  height: 30px;
+  padding: 10px 20px 10px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.div-inner-searchbar {
+  position: relative;
+}
+
+.loupe-icon {
+  color: grey;
+  position: absolute;
+  left: 10px;
+  top: 16px;
+}
