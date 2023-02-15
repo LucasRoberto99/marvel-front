@@ -15,7 +15,7 @@ const Home = ({ querySearch }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:4000/personnages?page=${page}&name=${querySearch}`
+        `https://site--marvel-backend--fhx5w78hhgzd.code.run/personnages?page=${page}&name=${querySearch}`
       );
       setData(response.data.results);
       setIsLoading(false);
