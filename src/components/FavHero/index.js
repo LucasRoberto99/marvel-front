@@ -29,7 +29,7 @@ const FavHero = ({ hero, fav, resetState, setResetState }) => {
             event.stopPropagation();
             setFavorite("white");
             await axios.get(
-              `http://localhost:4000/favorites/add/?id=${hero.id}`
+              `https://site--marvel-backend--fhx5w78hhgzd.code.run/favorites/add/?id=${hero.id}`
             );
             setResetState(!resetState);
           }}
