@@ -1,0 +1,30 @@
+.main-favorite {
+  width: 1024px;
+  margin: 0 auto;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.alertfav {
+  color: rgb(149, 149, 149);
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.caroussel-hero-title {
+  color: white;
+  font-size: 45px;
+}
+
+.caroussel-hero-fav {
+  padding: 5px;
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.caroussel-comic-fav {
+  padding: 5px;
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}

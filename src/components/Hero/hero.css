@@ -9,11 +9,41 @@
   gap: 10px;
   border-radius: 8px;
   margin-bottom: 20px;
+  /* background-color: black;  */
 }
 
 .hero-pic {
+  width: 210px;
+  height: 313px;
   border-radius: 8px;
   border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.div-relativ-hero {
+  position: relative;
+}
+
+.div-fav-hero {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.red {
+  color: red;
+}
+
+.white {
+  color: white;
 }
 
 .hero-name {
@@ -24,10 +54,12 @@
 .hero-desc {
   font-family: "Fjalla One", sans-serif;
   font-size: 14px;
-  height: 2.5rem;
+  height: 0.8rem;
   overflow: hidden;
 }
 
 .hero:hover {
   box-shadow: 0px 0px 5px white;
+  background-color: black;
+  cursor: pointer;
 }

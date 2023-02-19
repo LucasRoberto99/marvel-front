@@ -1,4 +1,4 @@
-.main {
+.main-home {
   width: 1024px;
   margin: 0 auto;
   /* border: green 1px solid; */
@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   padding: 20px 0px;
   box-sizing: border-box;
-  justify-content: space-between;
+  gap: 8px;
 }
 
 .paginate-button {
@@ -23,4 +23,30 @@
   outline: none;
   border: none;
   border-radius: 5px;
+}
+
+.div-searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar {
+  width: 280px;
+  height: 30px;
+  padding: 10px 20px 10px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.div-inner-searchbar {
+  position: relative;
+}
+
+.loupe-icon {
+  color: grey;
+  position: absolute;
+  left: 10px;
+  top: 16px;
 }

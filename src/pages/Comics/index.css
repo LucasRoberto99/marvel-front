@@ -1,0 +1,9 @@
+.main-comics {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  gap: 32px;
+  width: 1024px;
+  margin: 0 auto;
+  font-family: "Fjalla One", sans-serif;
+}

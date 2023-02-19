@@ -1,44 +1,43 @@
-import "./home.css";
+import "../Comics/index.css";
 
 import axios from "axios";
 
-import Hero from "../../components/Hero";
+import Comics from "../../components/Comics";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useState, useEffect } from "react";
 
-const Home = () => {
+const Comic = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
-  const [favoriteHeroList, setFavoriteHeroList] = useState([]);
+  const [favoriteComicList, setFavoriteComicList] = useState([]);
   const [querySearch, setQuerySearch] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://site--marvel-backend--fhx5w78hhgzd.code.run/personnages?page=${page}&name=${querySearch}`
+        `https://site--marvel-backend--fhx5w78hhgzd.code.run/comics?page=${page}&name=${querySearch}`
       );
       setData(response.data.results);
       setIsLoading(false);
       setMaxPage(Math.ceil(response.data.count / 20));
     };
     fetchData();
-  }, [page, querySearch, favoriteHeroList, setPage]);
+  }, [page, querySearch, favoriteComicList, setPage]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://site--marvel-backend--fhx5w78hhgzd.code.run/favorites"
+        "https://site--marvel-backend--fhx5w78hhgzd.code.run/favorites-comics"
       );
 
-      setFavoriteHeroList(response.data);
+      setFavoriteComicList(response.data);
     };
     fetchData();
-    // console.log("hey");
-  }, [page]);
+  }, [setPage]);
 
   return isLoading ? (
     <div className="loader"></div>
@@ -49,7 +48,7 @@ const Home = () => {
           <input
             className="searchbar"
             type="text"
-            placeholder="Search for any Hero"
+            placeholder="Search for any Comics"
             value={querySearch}
             onChange={(event) => {
               setPage(1);
@@ -59,21 +58,16 @@ const Home = () => {
           <FontAwesomeIcon className="loupe-icon" icon="magnifying-glass" />
         </div>
       </div>
-      <div className="main-home">
-        {data.map((perso) => {
-          for (let i = 0; i < favoriteHeroList.length; i++) {
-            if (favoriteHeroList[i].id === perso._id) {
-              return (
-                <Hero
-                  perso={perso}
-                  key={perso.name}
-                  list={favoriteHeroList}
-                  fav={"fav"}
-                />
-              );
+      <div className="main-comics">
+        {data.map((comic) => {
+          // console.log(comic);
+          for (let i = 0; i < favoriteComicList.length; i++) {
+            if (favoriteComicList[i].id === comic._id) {
+              return <Comics data={comic} key={comic._id} fav={"fav"} />;
             }
           }
-          return <Hero perso={perso} key={perso.name} />;
+
+          return <Comics data={comic} key={comic._id} />;
         })}
       </div>
       <div className="paginate-button">
@@ -102,4 +96,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Comic;

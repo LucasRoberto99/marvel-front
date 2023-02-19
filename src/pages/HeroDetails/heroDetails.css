@@ -1,0 +1,51 @@
+.main-hero-details {
+  width: 1024px;
+  margin: 0 auto;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.hero-details-picture {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hero-details-top-page {
+  /* height: 300px; */
+  /* border: green 1px solid; */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  background-color: black;
+  box-shadow: 0 0 5px white;
+  gap: 30px;
+  border-radius: 4px;
+}
+
+.hero-details-picture {
+  border-radius: 4px;
+}
+
+.hero-details-right-bloc {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  gap: 20px;
+}
+
+.hero-details-name {
+  font-size: 80px;
+}
+
+.hero-details-description {
+  line-height: 2rem;
+}
+
+.details-hero-comic-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin-top: 30px;
+  gap: 32px;
+}
